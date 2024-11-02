@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+    --accent-color:#8672ff;
+    --base-color:white;
+    --text-color:#2e2841;
+    --input-color:#f3f0ff;
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: poppines, segoe UI, sans-serif;
+    font-size: 12px;
+    color: var(--text-color);
+    text-align: center;
+}
+body{
+    min-height: 100vh;
+    background: url(front-view-stacked-books-graduation-cap-diploma-education-day.jpg);
+    background-position: right;
+    background-size: cover;
+    /* overflow: hidden; */
+}
+header h1{
+    color: var(--input-color);
+    font-weight: bolder;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+.contianer{
+    background-color: var(--base-color);
+    height: 100vh;
+    width: max(400px,600px);
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.contianer div h3{
+    margin: 10px 0;
+}
+
+ form {
+    width: min(400px,100%);
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+ }
+ 
+ form > div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+ form label{
+    flex-shrink: 0;
+    height: 50px;
+    width: 50px;
+    background-color: var(--accent-color);
+    fill-rule: var(--accent-color);
+    color: var(--base-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+form input{
+
+    flex-grow: 1;
+    min-width: 0;
+    height: 50px;
+    padding: 1em;
+    font: inherit;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    background-color: var(--input-color);
+    transition: 150s ease;
+}
+form input:hover{
+    border-color: var(--accent-color);
+}
+form input:focus{
+    outline: none;
+    background-color: var(--text-color);
+}
+div:has(input:focus) > label{
+    background-color: var(--text-color);
+}
+form input ::placeholder{
+    color: var(--text-color);
+}
+form button{
+    margin-top: 10px;
+    border: none;
+    border-radius: 100px;
+    padding: 0.5em 4em;
+    color: var(--base-color);
+    background-color: var(--accent-color);
+    font: inherit;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+form button:hover{
+    background-color: var(--text-color);
+}
+form button:focus{
+    outline: none;
+    background-color: var(--text-color);
+}
+a{
+    text-decoration: none;
+    color: var(--accent-color);
+}
+a:hover{
+    text-decoration: underline;
+}
+@media(max-width:1100px){
+    .wrapped{
+        width: min(600px,100%);
+        border-radius: 0;
+    }
+}
