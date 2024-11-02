@@ -19,7 +19,7 @@ html{
 }
 body{
     min-height: 100vh;
-    background: url(front-view-stacked-books-graduation-cap-diploma-education-day.jpg);
+    background: url(Images/front-view-stacked-books-graduation-cap-diploma-education-day.jpg);
     background-position: right;
     background-size: cover;
     /* overflow: hidden; */
@@ -75,7 +75,7 @@ header h1{
     font-size: 1.5rem;
     font-weight: 500;
 }
-form input{
+form input,select{
 
     flex-grow: 1;
     min-width: 0;
@@ -87,10 +87,14 @@ form input{
     background-color: var(--input-color);
     transition: 150s ease;
 }
-form input:hover{
+form input,select:hover{
     border-color: var(--accent-color);
 }
 form input:focus{
+    outline: none;
+    background-color: var(--text-color);
+}
+form select:focus{
     outline: none;
     background-color: var(--text-color);
 }
@@ -98,6 +102,9 @@ div:has(input:focus) > label{
     background-color: var(--text-color);
 }
 form input ::placeholder{
+    color: var(--text-color);
+}
+form select::placeholder{
     color: var(--text-color);
 }
 form button{
